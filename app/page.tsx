@@ -1,65 +1,129 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const courses = [
+  { emoji: "🎨", title: "Animation", mentor: "Big Bro Daniel" },
+  { emoji: "🎨", title: "Graphic Design (Canva)", mentor: "Brother In Law" },
+  { emoji: "🎬", title: "Video Editing (CapCut)", mentor: "Denike Ogunyemi" },
+  { emoji: "🎤", title: "Content Creating & Public Speaking", mentor: "Anne" },
+  { emoji: "💻", title: "Web Development", mentor: "The Fullstack Mechanic" },
+  { emoji: "🖥️", title: "Product Design", mentor: "Anonymous" },
+  { emoji: "🧶", title: "Crochet", mentor: "Rachael" },
+  { emoji: "🏥", title: "First Aid", mentor: "Glory Ubani" },
+  { emoji: "🌍", title: "French Language", mentor: "Rachael" },
+  { emoji: "🌍", title: "Portuguese Language", mentor: "Kathylinx" },
+];
+
+const highlights = [
+  { label: "1 skill per child", sub: "Deep focused mastery" },
+  { label: "2 days per week", sub: "Live online classes" },
+  { label: "2 months", sub: "July–August 2025" },
+  { label: "16 hands-on sessions", sub: "Build real projects" },
+  { label: "FREE Leadership Masterclass", sub: "Every student gets 2 days of mindset training" },
+  { label: "Certificate & Award Day", sub: "Official recognition" },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="flex flex-col">
+      {/* Hero */}
+      <section className="bg-[#3D1F0D] text-white min-h-[90vh] flex flex-col items-center justify-center text-center px-4 py-20 relative overflow-hidden">
+        {/* decorative circles */}
+        <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-[#F97316]/10 blur-3xl" />
+        <div className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-[#F97316]/10 blur-3xl" />
+
+        <p className="text-[#F97316] font-bold tracking-widest uppercase text-sm mb-4">Ages 6–28 · Online · July–August 2025</p>
+        <h1 className="font-black text-5xl md:text-7xl leading-tight max-w-3xl">
+          From{" "}
+          <span className="text-[#F97316]">Hiding</span>
+          <br />
+          to{" "}
+          <span className="text-[#F97316]">Emerging</span>
+        </h1>
+        <p className="mt-6 text-lg md:text-xl text-orange-100 max-w-xl leading-relaxed">
+          Where Nigerian kids learn skills that matter. We see the mighty in every child.
+        </p>
+        <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <Link
+            href="/register"
+            className="bg-[#F97316] hover:bg-orange-500 text-white font-black px-8 py-4 rounded-full text-lg transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Register Now — It&apos;s Free
+          </Link>
+          <Link
+            href="/mentors"
+            className="border-2 border-white/40 hover:border-white text-white font-bold px-8 py-4 rounded-full text-lg transition-colors"
           >
-            Documentation
-          </a>
+            Meet the Mentors
+          </Link>
         </div>
-      </main>
-    </div>
+        <p className="mt-8 text-orange-200 text-sm">10 Skills · Online · Nigeria</p>
+      </section>
+
+      {/* Welcome strip */}
+      <section className="bg-[#FFF8F0] py-16 px-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-black text-[#3D1F0D]">
+          Welcome to <span className="text-[#F97316]">Adullam Summer Camp</span>
+        </h2>
+        <p className="mt-4 text-[#3D1F0D]/70 max-w-2xl mx-auto text-lg leading-relaxed">
+          We&apos;re equipping children and young adults (ages 6–28) with real, practical, income-generating skills — the kind that open doors, create opportunities, and build futures.
+        </p>
+      </section>
+
+      {/* Program Highlights */}
+      <section className="bg-white py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-[#3D1F0D] text-center mb-2">
+            Program <span className="text-[#F97316]">Highlights</span>
+          </h2>
+          <p className="text-center text-[#3D1F0D]/60 mb-10">Everything you need to know about the camp</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {highlights.map((h) => (
+              <div key={h.label} className="bg-[#FFF8F0] border border-orange-100 rounded-2xl p-5">
+                <p className="font-black text-[#3D1F0D] text-base">{h.label}</p>
+                <p className="text-sm text-[#3D1F0D]/60 mt-1">{h.sub}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Courses */}
+      <section className="bg-[#3D1F0D] py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-white text-center mb-2">
+            10 <span className="text-[#F97316]">Skills</span> to Choose From
+          </h2>
+          <p className="text-center text-orange-200 mb-10">Pick one. Go deep. Come out transformed.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {courses.map((c) => (
+              <div key={c.title} className="bg-[#2a1508] hover:bg-[#4a2810] transition-colors rounded-2xl p-5 flex flex-col gap-2">
+                <span className="text-3xl">{c.emoji}</span>
+                <p className="font-black text-white text-base">{c.title}</p>
+                <p className="text-sm text-orange-300">Mentor: {c.mentor}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-[#F97316] py-16 px-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-black text-white">Ready to Emerge?</h2>
+        <p className="mt-3 text-white/90 text-lg max-w-lg mx-auto">
+          Spots are limited. Secure your child&apos;s place in the camp today.
+        </p>
+        <Link
+          href="/register"
+          className="mt-8 inline-block bg-[#3D1F0D] hover:bg-[#2a1508] text-white font-black px-10 py-4 rounded-full text-lg transition-colors"
+        >
+          Register Now
+        </Link>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#2a1508] text-orange-200 text-center py-6 text-sm">
+        <p>© 2025 Adullam Summer Camp · <a href="https://instagram.com/adullamsummercamp" className="underline hover:text-white">@adullamsummercamp</a></p>
+      </footer>
+    </main>
   );
 }
