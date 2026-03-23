@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const courses = [
@@ -26,37 +27,43 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       {/* Hero */}
-      <section className="bg-[#3D1F0D] text-white min-h-[90vh] flex flex-col items-center justify-center text-center px-4 py-20 relative overflow-hidden">
-        {/* decorative circles */}
-        <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-[#F97316]/10 blur-3xl" />
-        <div className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-[#F97316]/10 blur-3xl" />
-
-        <p className="text-[#F97316] font-bold tracking-widest uppercase text-sm mb-4">Ages 6–28 · Online · July–August 2025</p>
-        <h1 className="font-black text-5xl md:text-7xl leading-tight max-w-3xl">
-          From{" "}
-          <span className="text-[#F97316]">Hiding</span>
-          <br />
-          to{" "}
-          <span className="text-[#F97316]">Emerging</span>
-        </h1>
-        <p className="mt-6 text-lg md:text-xl text-orange-100 max-w-xl leading-relaxed">
-          Where Nigerian kids learn skills that matter. We see the mighty in every child.
-        </p>
-        <div className="mt-10 flex flex-col sm:flex-row gap-4">
-          <Link
-            href="/register"
-            className="bg-[#F97316] hover:bg-orange-500 text-white font-black px-8 py-4 rounded-full text-lg transition-colors"
-          >
-            Register Now — It&apos;s Free
-          </Link>
-          <Link
-            href="/mentors"
-            className="border-2 border-white/40 hover:border-white text-white font-bold px-8 py-4 rounded-full text-lg transition-colors"
-          >
-            Meet the Mentors
-          </Link>
+      <section className="relative h-[90vh] bg-[#3D1F0D] flex flex-col items-center justify-center text-center px-4 py-20 overflow-hidden">
+        {/* <Image
+          src="/images/adullamheroimage.png"
+          alt="Adullam Summer Camp — From Hiding to Emerging"
+          fill
+          priority
+          className="object-cover object-center"
+        /> */}
+        <div className="absolute inset-0" />
+        <div className="relative z-10 flex flex-col items-center">
+          <p className="text-[#F97316] font-bold tracking-widest uppercase text-sm mb-4">Ages 6–28 · Online · July–August 2026</p>
+          <h1 className="font-black text-5xl md:text-7xl leading-tight max-w-3xl text-white">
+            From{" "}
+            <span className="text-[#F97316]">Hiding</span>
+            <br />
+            to{" "}
+            <span className="text-[#F97316]">Emerging</span>
+          </h1>
+          <p className="mt-6 text-lg md:text-xl text-orange-100 max-w-xl leading-relaxed">
+            Where Nigerian kids learn skills that matter. We see the mighty in every child.
+          </p>
+          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/register"
+              className="bg-[#F97316] hover:bg-orange-500 text-white font-black px-8 py-4 rounded-full text-lg transition-colors"
+            >
+              Register Now — It&apos;s Free
+            </Link>
+            <Link
+              href="/mentors"
+              className="border-2 border-white/40 hover:border-white text-white font-bold px-8 py-4 rounded-full text-lg transition-colors"
+            >
+              Meet the Mentors
+            </Link>
+          </div>
+          <p className="mt-8 text-orange-200 text-sm">10 Skills · Online · Nigeria</p>
         </div>
-        <p className="mt-8 text-orange-200 text-sm">10 Skills · Online · Nigeria</p>
       </section>
 
       {/* Welcome strip */}
@@ -65,7 +72,7 @@ export default function Home() {
           Welcome to <span className="text-[#F97316]">Adullam Summer Camp</span>
         </h2>
         <p className="mt-4 text-[#3D1F0D]/70 max-w-2xl mx-auto text-lg leading-relaxed">
-          We&apos;re equipping children and young adults (ages 6–28) with real, practical, income-generating skills — the kind that open doors, create opportunities, and build futures.
+          We&apos;re equipping children and young adults (ages 5–20) with real, practical, income-generating skills — the kind that open doors, create opportunities, and build futures.
         </p>
       </section>
 
