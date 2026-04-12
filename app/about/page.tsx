@@ -9,7 +9,7 @@ const values = [
 
 const stats = [
   { value: "10", label: "Skills Offered" },
-  { value: "6–28", label: "Age Range" },
+  { value: "5–20", label: "Age Range" },
   { value: "16", label: "Hands-on Sessions" },
   { value: "2", label: "Months of Impact" },
 ];
@@ -24,7 +24,7 @@ export default function AboutPage() {
           About <span className="text-[#F97316]">Adullam</span>
         </h1>
         <p className="mt-4 text-orange-200 max-w-2xl mx-auto text-lg leading-relaxed">
-          A cave called Adullam was where the distressed, the indebted, and the discontented gathered — and became mighty men. That&apos;s our story too.
+          A cave called Adullam was where the distressed, the indebted, and the discontented gathered and became mighty men. That&apos;s our story too.
         </p>
       </section>
 
@@ -37,10 +37,10 @@ export default function AboutPage() {
               From Hiding<br />to <span className="text-[#F97316]">Emerging</span>
             </h2>
             <p className="mt-5 text-[#3D1F0D]/70 leading-relaxed">
-              Adullam Summer Camp exists to equip Nigerian children and young adults (ages 6–28) with real, practical, income-generating skills. We believe every child is mighty — they just need the right environment to emerge.
+              Adullam Summer Camp exists to equip Nigerian children and young adults (ages 5–20) with real, practical, income-generating skills. We believe every child is mighty — they just need the right environment to emerge.
             </p>
             <p className="mt-4 text-[#3D1F0D]/70 leading-relaxed">
-              Running July–August 2025, the camp offers 10 skill tracks taught by passionate mentors, 2 days a week, entirely online — so no child is left out regardless of location.
+              Running July–August 2026, the camp offers 10 skill tracks taught by passionate mentors, 2 days a week, entirely online — so no child is left out regardless of location.
             </p>
           </div>
           {/* Stats */}

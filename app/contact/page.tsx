@@ -2,10 +2,10 @@
 import { useState } from "react";
 
 const faqs = [
-  { q: "What age group is the camp for?", a: "Adullam Summer Camp is open to children and young adults between ages 6 and 28." },
+  { q: "What age group is the camp for?", a: "Adullam Summer Camp is open to children and young adults between ages 5 and 20." },
   { q: "Is the camp free?", a: "Registration is free. Some courses may require you to get specific materials (e.g., yarn for Crochet, CapCut for Video Editing)." },
   { q: "Is it online or physical?", a: "100% online. All you need is a phone or laptop and access to the internet." },
-  { q: "When does the camp run?", a: "July–August 2025, 2 days per week, for 2 months (16 sessions total)." },
+  { q: "When does the camp run?", a: "July–August 2026, 2 days per week, for 2 months (16 sessions total)." },
   { q: "Can I register for more than one course?", a: "No — the camp is designed for deep mastery. Each learner picks one skill and commits fully to it." },
   { q: "How do I register?", a: "Head to the Register page and fill out the form. It will redirect you to the official Google Form to complete your registration." },
 ];

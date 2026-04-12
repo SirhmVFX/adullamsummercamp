@@ -2,25 +2,25 @@ import Image from "next/image";
 import Link from "next/link";
 
 const courses = [
-  { emoji: "🎨", title: "Animation", mentor: "Big Bro Daniel" },
-  { emoji: "🎨", title: "Graphic Design (Canva)", mentor: "Brother In Law" },
-  { emoji: "🎬", title: "Video Editing (CapCut)", mentor: "Denike Ogunyemi" },
-  { emoji: "🎤", title: "Content Creating & Public Speaking", mentor: "Anne" },
-  { emoji: "💻", title: "Web Development", mentor: "The Fullstack Mechanic" },
-  { emoji: "🖥️", title: "Product Design", mentor: "Anonymous" },
-  { emoji: "🧶", title: "Crochet", mentor: "Rachael" },
-  { emoji: "🏥", title: "First Aid", mentor: "Glory Ubani" },
-  { emoji: "🌍", title: "French Language", mentor: "Rachael" },
+  { emoji: "🎨", title: "Coding", mentor: "Daniel Iyiola" },
+  { emoji: "🎨", title: "Graphic Design (Canva)", mentor: "David Iyiola" },
+  { emoji: "🎬", title: "Video Editing (CapCut)", mentor: "Adenike Ogunyemi" },
+  { emoji: "🎤", title: "Content Creating (Story Telling)", mentor: "Anne Iyiola (A.I🌹)" },
+  { emoji: "💻", title: "Web Development", mentor: "Samuel Ganiu (The Fullstack Mechanic)" },
+  { emoji: "🖥️", title: "Product Design", mentor: "Daniel Oludahunsi" },
+  { emoji: "🧶", title: "Crochet", mentor: "Grace Oderinde" },
+  { emoji: "🏥", title: "First Aid", mentor: "Dr. Glory Ishola (Dr. Ubani)" },
+  { emoji: "🌍", title: "French Language", mentor: "Rachael Iyiola" },
   { emoji: "🌍", title: "Portuguese Language", mentor: "Kathylinx" },
 ];
 
 const highlights = [
   { label: "1 skill per child", sub: "Deep focused mastery" },
   { label: "2 days per week", sub: "Live online classes" },
-  { label: "2 months", sub: "July–August 2025" },
-  { label: "16 hands-on sessions", sub: "Build real projects" },
-  { label: "FREE Leadership Masterclass", sub: "Every student gets 2 days of mindset training" },
-  { label: "Certificate & Award Day", sub: "Official recognition" },
+  { label: "2 months", sub: "July–August 2026" },
+  { label: "16 hands-on sessions", sub: "Build real life projects" },
+  { label: "2-Days Free Leadership Masterclass", sub: "Every student gets 2 days of mindset training, building confidence, communication, and leadership skills" },
+  { label: "Certificate & Award Day", sub: "Official recognition and celebration during final hangout" },
 ];
 
 export default function Home() {

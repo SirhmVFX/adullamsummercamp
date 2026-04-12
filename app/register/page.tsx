@@ -122,7 +122,7 @@ export default function RegisterPage() {
                     required
                     min={6}
                     max={28}
-                    placeholder="Must be between 6 and 28"
+                    placeholder="Must be between 5 and 20"
                     className="border border-orange-200 rounded-xl px-4 py-3 text-[#3D1F0D] bg-[#FFF8F0] focus:outline-none focus:ring-2 focus:ring-[#F97316] placeholder:text-[#3D1F0D]/30"
                   />
                 </div>
