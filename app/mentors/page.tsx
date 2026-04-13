@@ -21,9 +21,9 @@ const mentors = [
   {
     name: "Adenike Ogunyemi",
     course: "Video Editing (CapCut)",
-    image: "/images/pl.webp",
+    image: "/images/nike.jpeg",
     emoji: "🎬",
-    bio: "A video editing pro teaching the art of storytelling through compelling video content.",
+    bio: "Denike Ogungemi is a Certified Brand Strategist and Media Creative with over four years of experience helping brands build strong digital identities and communicate with clarity, creativity, and purpose. Starting her career as a social media manager, she has evolved into a well-rounded creative professional with a deep understanding of content strategy, audience behavior, and digital storytelling. She has successfully developed and executed content strategies, managed brand communications and campaigns, and created high-performing visual content for multiple projects and growing brands. Her work is driven by a balance of creativity and data using insights to craft content that not only captures attention but also drives engagement and brand growth. Denike is highly proficient with a range of industry tools including Canva, CapCut, Adobe Premiere Pro, Notion, Trello, and AI-powered creative tools. She leverages these platforms to streamline workflows, enhance content quality, and deliver visually compelling content.",
     requirements: ["CapCut app installed", "Phone or laptop"],
   },
   {
