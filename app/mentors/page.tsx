@@ -69,9 +69,9 @@ const mentors = [
   {
     name: "Rachael Iyiola",
     course: "French Language",
-    image: "/images/pl.webp",
+    image: "/images/rach.jpeg",
     emoji: "🌍",
-    bio: "A French language enthusiast opening doors to global communication and culture.",
+    bio: "Rachael Morolayo Iyiola is a passionate French language facilitator who enjoys helping children and young people learn in a fun and engaging way. She will be teaching French at the Children’s Summer Camp for participants aged 2 to 20 years. She has successfully passed the DELF/DALF examinations and has practical experience translating songs, write-ups, and books, as well as working on French research projects. This allows her to bring both knowledge and real-life application into her teaching. Rachael’s approach is simple and interactive. She uses games, music, storytelling, and conversations to make learning enjoyable and easy to understand for all age groups. She focuses on creating a comfortable space where learners feel confident to try, make mistakes, and grow. Her goal is to help every child leave with a better understanding of French and a genuine interest in the language.",
     requirements: ["Phone or laptop"],
   },
   {
