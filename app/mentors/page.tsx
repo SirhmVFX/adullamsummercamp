@@ -75,7 +75,7 @@ const mentors = [
     requirements: ["Phone or laptop"],
   },
   {
-    name: "Kathylinx",
+    name: "Kawthar Adeniyi (Kathylinx)",
     course: "Portuguese Language",
     image: "/images/pl.webp",
     emoji: "🌍",
