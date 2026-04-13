@@ -29,9 +29,9 @@ const mentors = [
   {
     name: "Anne Iyiola (A.I🌹)",
     course: "Content Creating (Story Telling)",
-    image: "/images/pl.webp",
+    image: "/images/ai.jpeg",
     emoji: "🎤",
-    bio: "A storyteller and public speaking coach empowering young voices to share their stories boldly.",
+    bio: "Anne Iyiola is a certified educator, content strategist, and storytelling specialist with over four years of experience in curriculum design, digital content creation, and youth education. As Content Creation and Storytelling Mentor at Adullam Summer Camp, she facilitates structured learning in narrative writing, digital content development, and creative communication, equipping participants with skills that are directly applicable in today's media-driven world. Her professional background spans content management, SEO, brand strategy, and classroom teaching across secondary and community education settings.",
     requirements: ["Phone or laptop", "Access to a social media platform (e.g., YouTube)"],
   },
   {
@@ -51,19 +51,19 @@ const mentors = [
     requirements: ["Laptop (Figma installed or accessible)", "Access to internet", "Pen and Jotter"],
   },
   {
-    name: "Grace Oderinde",
+    name: "Grace Tofunmi",
     course: "Crochet",
-    image: "/images/pl.webp",
+    image: "/images/grace.jpeg",
     emoji: "🧶",
-    bio: "A crochet artist sharing the joy and income potential of handmade crafts with young learners.",
+    bio: "Grace Tofunmi is the founder of Bídèmí, a crochet brand dedicated to creating handmade pieces that blend craftsmanship, storytelling, and cultural inspiration. With five years of experience in crochet, she is passionate about transforming simple yarn into meaningful designs that reflect patience, creativity and artistry. Inspired by memories of watching her mother crochet, Grace built Bídèmí as a way to honour that legacy while creating pieces that celebrate culture and handmade fashion. Through Bídèmí, she is growing a global brand that tells stories through crochet.",
     requirements: ["Crochet hook (pin)", "Wool (yarn)"],
   },
   {
     name: "Dr. Glory Ishola (Dr. Ubani)",
     course: "First Aid",
-    image: "/images/pl.webp",
+    image: "/images/glory.jpeg",
     emoji: "🏥",
-    bio: "A healthcare professional equipping kids with life-saving first aid knowledge and skills.",
+    bio: "Glory Ishola is a medical doctor with over 3 years of clinical experience in the assessment and management of acute and emergency conditions. She trained at Saint Nicholas Hospital during her housemanship and currently practices at Reddington Hospital, where she continues to build expertise in emergency care and clinical management. She holds a Basic Life Support (BLS) certification and is skilled in patient evaluation, stabilization, and the management of urgent medical presentations. Her clinical experience spans a wide range of cases, reinforcing her understanding of the importance of timely first aid in improving patient outcomes. She is passionate about preventive health education and is committed to promoting first aid awareness and emergency preparedness.",
     requirements: ["Clean cloth or towel", "Cotton wool", "Plasters", "A doll or teddy (for practice)"],
   },
   {
@@ -77,9 +77,9 @@ const mentors = [
   {
     name: "Kawthar Adeniyi (Kathylinx)",
     course: "Portuguese Language",
-    image: "/images/pl.webp",
+    image: "/images/kath.jpeg",
     emoji: "🌍",
-    bio: "A Portuguese language tutor helping young Nigerians connect with the Lusophone world.",
+    bio: "Kawthar Omolabake Adeniyi is a language educator, phonics instructor, and content creator passionate about literacy development and language learning. She specializes in teaching phonics, diction in English, oral English, and Portuguese , helping learners build strong reading, pronunciation, and communication skills. Her journey with the Portuguese language began during her university years, where her curiosity and love for languages deepened. Through consistent learning, mentorship, and language exchange with fellow learners, she developed a strong interest in Portuguese and began sharing her knowledge with others. Over time, she started teaching Portuguese to peers and learners who were interested in exploring the language. Over the years, Kawthar has worked with learners across different age groups, teaching phonics, English, and Portuguese, and helping language learners build confidence in reading, speaking, and communication through engaging and practical teaching approaches. Beyond the classroom, she creates educational content and language resources through Kathylinx Channel, where she shares phonics lessons, language tips, and literacy-focused materials. Her work is driven by a passion for helping learners discover the joy of reading, languages, and effective communication. Committed to impact and continuous learning, Kawthar continues to promote literacy, language education, and youth development within her community and beyond. Social handles: LinkedIn: Kawthar Adeniyi, YouTube: kathylinxchannel",
     requirements: ["Phone or laptop"],
   },
 ];
