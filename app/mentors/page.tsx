@@ -1,9 +1,11 @@
 import Link from "next/link";
+import MentorCard from "../_components/MentorCard";
 
 const mentors = [
   {
     name: "Daniel Iyiola",
     course: "Coding",
+    image: "/images/pl.webp",
     emoji: "🎨",
     bio: "A creative animator passionate about bringing stories to life through motion and design.",
     requirements: ["Phone or laptop", "Access to internet/data", "Writing materials"],
@@ -11,13 +13,15 @@ const mentors = [
   {
     name: "David Iyiola",
     course: "Graphic Design (Canva)",
+    image: "/images/david.jpeg",
     emoji: "🎨",
-    bio: "A graphic design expert helping young creatives build visual communication skills using Canva.",
+    bio: "Iyiola David Olaoluwa is a youth mentor, creative designer, and logistics professional with a strong passion for empowering young people through learning, creativity, and personal development. He has over 7–8 years of experience working with teenagers and young adults, providing guidance in career development, mentorship, and spiritual growth. He is also an experienced Canva designer with over 2 years of practice, creating engaging visual content for churches and personal projects. His creative work includes book cover designs that have received recognition on Wattpad, reflecting his ability to combine creativity with audience-focused design. Professionally, he works as a Fleet Manager in the logistics sector, with a growing interest in aviation through ongoing pilot ground school training. He is passionate about systems, structure, and helping people understand how to turn skills into opportunities.",
     requirements: ["Canva app installed", "Phone or laptop"],
   },
   {
     name: "Adenike Ogunyemi",
     course: "Video Editing (CapCut)",
+    image: "/images/pl.webp",
     emoji: "🎬",
     bio: "A video editing pro teaching the art of storytelling through compelling video content.",
     requirements: ["CapCut app installed", "Phone or laptop"],
@@ -25,6 +29,7 @@ const mentors = [
   {
     name: "Anne Iyiola (A.I🌹)",
     course: "Content Creating (Story Telling)",
+    image: "/images/pl.webp",
     emoji: "🎤",
     bio: "A storyteller and public speaking coach empowering young voices to share their stories boldly.",
     requirements: ["Phone or laptop", "Access to a social media platform (e.g., YouTube)"],
@@ -32,20 +37,23 @@ const mentors = [
   {
     name: "Samuel Ganiu (The Fullstack Mechanic)",
     course: "Web Development",
+    image: "/images/sam.jpeg",
     emoji: "💻",
-    bio: "A fullstack developer turning beginners into builders one line of code at a time.",
+    bio: "Ganiu Samuel, widely known as *“The Fullstack Mechanic,”* is a multidisciplinary creative and builder working at the intersection of design, technology, visual effects, and storytelling. With over eight years of experience in design and more than two years of growing expertise in software engineering, he seamlessly blends product thinking with technical execution to craft impactful digital experiences. He operates across both frontend and backend development, using technologies such as React, Next.js, Vue.js, Node.js, NestJS, Laravel, FastAPI, and Go. Beyond engineering, he brings ideas to life through motion design, video production, and immersive visual storytelling. His work spans platform development, user-centered product design, and high-quality multimedia content creation. Samuel has contributed to and led projects like Telex—a real-time monitoring and notification system—and several AI-driven tools, consistently combining creativity with structured problem-solving. He has also spent over three years instructing multimedia and software development at APTECH Computer Education, Alagbole, where he mentors and equips aspiring creatives and developers with practical skills. In addition to his technical and educational roles, he actively works as a brand manager and designer for multiple brands, and co-founded a full-service branding agency, Saisei (Rebirth), along with its supporting subdivisions. He also leads GeekHive, a tech community dedicated to guiding individuals from beginner level to job-ready across various tech disciplines. Driven by curiosity and execution, The Fullstack Mechanic is passionate about building products, growing businesses, simplifying complex ideas, and transforming concepts into systems people genuinely enjoy using.",
     requirements: ["Laptop (compulsory)"],
   },
   {
     name: "Daniel Oludahunsi",
     course: "Product Design",
+    image: "/images/dan.jpeg",
     emoji: "🖥️",
-    bio: "A product designer teaching the fundamentals of UX/UI and how to design products people love.",
+    bio: "Daniel Oludahunsi is a product designer with over 4+ years of experience designing intuitive, user-centered digital products across web and mobile platforms. He specializes in creating solutions that address real-world problems. He has worked with companies such as Sweesher, FinFyde, Statsbyte and Lavenderlane, where he has contributed to building scalable and impactful digital experiences. Currently, Daniel works at Sleekabyte Technologies, where he continues to design products that balance user needs with business goals. Over the years, he has also worked on a variety of projects including Robovolts, Gestion, Squadneti, Bookmint, Skuu AI and The Pan African American Chamber of Commerce, among others. His experience spans industries such as fintech, SAAS, AI and lifestyle products, giving him a well-rounded perspective on product design. With a process rooted in research, iteration and design thinking, Daniel approaches design beyond visuals, creating products that not only look good but work effectively in real-world contexts. As a designer passionate about impact, he is committed to leveraging technology to solve everyday challenges faced by people in Nigeria and across Africa. Social handles: Twitter (X): @danielenitan_ Linkedin: Daniel Oludahunsi",
     requirements: ["Laptop (Figma installed or accessible)", "Access to internet", "Pen and Jotter"],
   },
   {
     name: "Grace Oderinde",
     course: "Crochet",
+    image: "/images/pl.webp",
     emoji: "🧶",
     bio: "A crochet artist sharing the joy and income potential of handmade crafts with young learners.",
     requirements: ["Crochet hook (pin)", "Wool (yarn)"],
@@ -53,6 +61,7 @@ const mentors = [
   {
     name: "Dr. Glory Ishola (Dr. Ubani)",
     course: "First Aid",
+    image: "/images/pl.webp",
     emoji: "🏥",
     bio: "A healthcare professional equipping kids with life-saving first aid knowledge and skills.",
     requirements: ["Clean cloth or towel", "Cotton wool", "Plasters", "A doll or teddy (for practice)"],
@@ -60,6 +69,7 @@ const mentors = [
   {
     name: "Rachael Iyiola",
     course: "French Language",
+    image: "/images/pl.webp",
     emoji: "🌍",
     bio: "A French language enthusiast opening doors to global communication and culture.",
     requirements: ["Phone or laptop"],
@@ -67,6 +77,7 @@ const mentors = [
   {
     name: "Kathylinx",
     course: "Portuguese Language",
+    image: "/images/pl.webp",
     emoji: "🌍",
     bio: "A Portuguese language tutor helping young Nigerians connect with the Lusophone world.",
     requirements: ["Phone or laptop"],
@@ -91,32 +102,7 @@ export default function MentorsPage() {
       <section className="bg-[#FFF8F0] py-16 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {mentors.map((m) => (
-            <div key={`${m.name}-${m.course}`} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-orange-100 flex flex-col">
-              {/* Card header */}
-              <div className="bg-[#3D1F0D] px-6 py-8 flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full bg-[#F97316]/20 flex items-center justify-center text-4xl mb-4">
-                  {m.emoji}
-                </div>
-                <h2 className="font-black text-white text-xl">{m.name}</h2>
-                <span className="mt-1 text-[#F97316] text-sm font-bold">{m.course}</span>
-              </div>
-
-              {/* Card body */}
-              <div className="px-6 py-5 flex flex-col gap-4 flex-1">
-                <p className="text-[#3D1F0D]/70 text-sm leading-relaxed">{m.bio}</p>
-                <div>
-                  <p className="text-xs font-black text-[#3D1F0D] uppercase tracking-wider mb-2">Materials Needed</p>
-                  <ul className="flex flex-col gap-1">
-                    {m.requirements.map((r) => (
-                      <li key={r} className="flex items-start gap-2 text-sm text-[#3D1F0D]/70">
-                        <span className="text-[#F97316] mt-0.5">✓</span>
-                        {r}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <MentorCard key={`${m.name}-${m.course}`} {...m} />
           ))}
         </div>
       </section>
