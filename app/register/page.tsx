@@ -36,7 +36,7 @@ export default function RegisterPage() {
     e.preventDefault();
     // Redirect to the Google Form
     window.open(
-      "https://docs.google.com/forms/d/1pgVtU6jfS0JLvLUPy-jTLr1KZYYfQ0fQubKIQhBs4GQ/viewform",
+      "https://forms.gle/VFGW2s2V162jTkTc7",
       "_blank"
     );
     setSubmitted(true);
