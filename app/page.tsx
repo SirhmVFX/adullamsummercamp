@@ -11,7 +11,7 @@ const courses = [
   { emoji: "🧶", title: "Crochet", mentor: "Grace Oderinde" },
   { emoji: "🏥", title: "First Aid", mentor: "Dr. Glory Ishola (Dr. Ubani)" },
   { emoji: "🌍", title: "French Language", mentor: "Rachael Iyiola" },
-  { emoji: "🌍", title: "Portuguese Language", mentor: "Kathylinx" },
+  { emoji: "🌍", title: "Portuguese Language", mentor: "Kawthar Adeniyi (Kathylinx)" },
 ];
 
 const highlights = [
