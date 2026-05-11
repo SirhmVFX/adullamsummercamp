@@ -3,14 +3,6 @@ import MentorCard from "../_components/MentorCard";
 
 const mentors = [
   {
-    name: "Daniel Iyiola",
-    course: "Coding",
-    image: "/images/pl.webp",
-    emoji: "🎨",
-    bio: "A creative animator passionate about bringing stories to life through motion and design.",
-    requirements: ["Phone or laptop", "Access to internet/data", "Writing materials"],
-  },
-  {
     name: "David Iyiola",
     course: "Graphic Design (Canva)",
     image: "/images/david.jpeg",

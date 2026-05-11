@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const courses = [
-  { emoji: "🎨", title: "Coding", mentor: "Daniel Iyiola" },
   { emoji: "🎨", title: "Graphic Design (Canva)", mentor: "David Iyiola" },
   { emoji: "🎬", title: "Video Editing (CapCut)", mentor: "Adenike Ogunyemi" },
   { emoji: "🎤", title: "Content Creating (Story Telling)", mentor: "Anne Iyiola (A.I🌹)" },
@@ -28,16 +27,10 @@ export default function Home() {
     <main className="flex flex-col">
       {/* Hero */}
       <section className="relative h-[90vh] bg-[#3D1F0D] flex flex-col items-center justify-center text-center px-4 py-20 overflow-hidden">
-        {/* <Image
-          src="/images/adullamheroimage.png"
-          alt="Adullam Summer Camp — From Hiding to Emerging"
-          fill
-          priority
-          className="object-cover object-center"
-        /> */}
+        
         <div className="absolute inset-0" />
         <div className="relative z-10 flex flex-col items-center">
-          <p className="text-[#F97316] font-bold tracking-widest uppercase text-sm mb-4">Ages 6–28 · Online · July–August 2026</p>
+          <p className="text-[#F97316] font-bold tracking-widest uppercase text-sm mb-4">Ages 5–20 · Online · July–August 2026</p>
           <h1 className="font-black text-5xl md:text-7xl leading-tight max-w-3xl text-white">
             From{" "}
             <span className="text-[#F97316]">Hiding</span>
@@ -53,7 +46,7 @@ export default function Home() {
               href="/register"
               className="bg-[#F97316] hover:bg-orange-500 text-white font-black px-8 py-4 rounded-full text-lg transition-colors"
             >
-              Register Now — It&apos;s Free
+              Register Now 
             </Link>
             <Link
               href="/mentors"
@@ -62,7 +55,7 @@ export default function Home() {
               Meet the Mentors
             </Link>
           </div>
-          <p className="mt-8 text-orange-200 text-sm">10 Skills · Online · Nigeria</p>
+          <p className="mt-8 text-orange-200 text-sm">9 Skills · Online · Nigeria</p>
         </div>
       </section>
 
@@ -98,7 +91,7 @@ export default function Home() {
       <section className="bg-[#3D1F0D] py-16 px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black text-white text-center mb-2">
-            10 <span className="text-[#F97316]">Skills</span> to Choose From
+            9 <span className="text-[#F97316]">Skills</span> to Choose From
           </h2>
           <p className="text-center text-orange-200 mb-10">Pick one. Go deep. Come out transformed.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
