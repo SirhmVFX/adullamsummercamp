@@ -86,7 +86,7 @@ export default function MentorsPage() {
           Meet Your <span className="text-[#F97316]">Mentors</span>
         </h1>
         <p className="mt-4 text-orange-200 max-w-xl mx-auto text-lg">
-          10 skilled, passionate instructors. Each one dedicated to seeing you emerge.
+          9 skilled, passionate instructors. Each one dedicated to seeing you emerge.
         </p>
       </section>
 
@@ -110,9 +110,6 @@ export default function MentorsPage() {
         </Link>
       </section>
 
-      <footer className="bg-[#2a1508] text-orange-200 text-center py-6 text-sm">
-        <p>© 2025 Adullam Summer Camp · <a href="https://instagram.com/adullamsummercamp" className="underline hover:text-white">@adullamsummercamp</a></p>
-      </footer>
     </main>
   );
 }
