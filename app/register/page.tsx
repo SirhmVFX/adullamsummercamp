@@ -93,7 +93,7 @@ export default function RegisterPage() {
             <div className="bg-white rounded-3xl shadow-sm border border-orange-100 overflow-hidden">
               <div className="bg-[#3D1F0D] px-8 py-6">
                 <h2 className="font-black text-white text-2xl">Registration Form</h2>
-                <p className="text-orange-200 text-sm mt-1">Fill in your details to register for Adullam Summer Camp 2025</p>
+                <p className="text-orange-200 text-sm mt-1">Fill in your details to register for Adullam Summer Camp 2026</p>
               </div>
 
               <form onSubmit={handleSubmit} className="px-8 py-8 flex flex-col gap-6">
@@ -212,7 +212,7 @@ export default function RegisterPage() {
         </div>
       </section>
 
-   
+
     </main>
   );
 }
