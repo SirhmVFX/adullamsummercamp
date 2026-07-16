@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import HeroTiles from "./_components/HeroTiles";
 
 const courses = [
   { emoji: "🎨", title: "Graphic Design (Canva)", mentor: "David Iyiola" },
@@ -26,37 +26,63 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       {/* Hero */}
-      <section className="relative h-[90vh] bg-[#3D1F0D] flex flex-col items-center text-center px-4 py-20 overflow-hidden">
+      <section className="relative h-screen min-h-150 bg-[#3D1F0D] flex flex-col items-center md:pt-46 pt-24 text-center px-4 overflow-hidden">
 
-        <div className="absolute inset-0" />
-        <Image src="/images/illustrations.svg" alt="Hero" width={10000} height={1000} className=" absolute left-0 right-0  bottom-0 " />
-        <div className="relative z-10 flex flex-col items-center">
-          <p className="text-[#F97316] font-bold tracking-widest uppercase text-sm mb-4">Ages 6–20 · Online · July–August 2026</p>
-          <h1 className="font-black text-5xl md:text-7xl leading-tight max-w-3xl text-white">
+        {/* SVG background illustration */}
+        <img
+          src="/images/illustrations.svg"
+          alt=""
+          aria-hidden="true"
+          className="absolute left-0 right-0 bottom-0 w-full pointer-events-none"
+          style={{ zIndex: 999 }}
+        />
+
+        {/* Interactive tile grid */}
+        <HeroTiles />
+
+        {/* Subtle radial glow behind text */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(249,115,22,0.12) 0%, transparent 70%)",
+            zIndex: 2,
+          }}
+        />
+
+        {/* Content */}
+        <div className="relative flex flex-col items-center gap-4 px-4 " style={{ zIndex: 9999 }}>
+          <span className="text-[#F97316] font-bold tracking-widest uppercase text-xs sm:text-sm">
+            Ages 6–20 · Online · July–August 2026
+          </span>
+
+          <h1 className="font-black text-4xl sm:text-6xl md:text-7xl leading-tight max-w-3xl text-white">
             From{" "}
             <span className="text-[#F97316]">Hiding</span>
             <br />
             to{" "}
             <span className="text-[#F97316]">Emerging</span>
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-orange-100 max-w-xl leading-relaxed">
+
+          <p className="text-base sm:text-lg md:text-xl text-orange-100 max-w-lg leading-relaxed">
             Where Nigerian kids learn skills that matter. We see the mighty in every child.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+
+          <div className="flex flex-col sm:flex-row gap-3 mt-4 w-full sm:w-auto">
             <Link
               href="/register"
-              className="bg-[#F97316] hover:bg-orange-500 text-white font-black px-8 py-4 rounded-full text-lg transition-colors"
+              className="bg-[#F97316] hover:bg-orange-500 text-white font-black px-8 py-4 rounded-full text-base sm:text-lg transition-colors text-center"
             >
               Register Now
             </Link>
             <Link
               href="/mentors"
-              className="border-2 border-white/40 hover:border-white text-white font-bold px-8 py-4 rounded-full text-lg transition-colors"
+              className="border-2 border-white/40 hover:border-white text-white font-bold px-8 py-4 rounded-full text-base sm:text-lg transition-colors text-center"
             >
               Meet the Mentors
             </Link>
           </div>
-          <p className="mt-8 text-orange-200 text-sm">9 Skills · Online · Nigeria</p>
+
+          <p className="text-orange-200/60 text-xs sm:text-sm mt-2">9 Skills · Online · Nigeria</p>
         </div>
       </section>
 
