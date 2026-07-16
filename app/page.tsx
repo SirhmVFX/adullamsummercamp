@@ -26,11 +26,12 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       {/* Hero */}
-      <section className="relative h-[90vh] bg-[#3D1F0D] flex flex-col items-center justify-center text-center px-4 py-20 overflow-hidden">
-        
+      <section className="relative h-[90vh] bg-[#3D1F0D] flex flex-col items-center text-center px-4 py-20 overflow-hidden">
+
         <div className="absolute inset-0" />
+        <Image src="/images/illustrations.svg" alt="Hero" width={10000} height={1000} className=" absolute left-0 right-0  bottom-0 " />
         <div className="relative z-10 flex flex-col items-center">
-          <p className="text-[#F97316] font-bold tracking-widest uppercase text-sm mb-4">Ages 5–20 · Online · July–August 2026</p>
+          <p className="text-[#F97316] font-bold tracking-widest uppercase text-sm mb-4">Ages 6–20 · Online · July–August 2026</p>
           <h1 className="font-black text-5xl md:text-7xl leading-tight max-w-3xl text-white">
             From{" "}
             <span className="text-[#F97316]">Hiding</span>
@@ -46,7 +47,7 @@ export default function Home() {
               href="/register"
               className="bg-[#F97316] hover:bg-orange-500 text-white font-black px-8 py-4 rounded-full text-lg transition-colors"
             >
-              Register Now 
+              Register Now
             </Link>
             <Link
               href="/mentors"
@@ -120,7 +121,7 @@ export default function Home() {
         </Link>
       </section>
 
-    
+
     </main>
   );
 }
