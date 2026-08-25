@@ -1,5 +1,9 @@
 import Link from "next/link";
 import MentorCard from "../_components/MentorCard";
+import PhotoSlot, { PhotoGrid } from "../_components/PhotoSlot";
+import VideoSlot from "../_components/VideoSlot";
+import QuoteCard from "../_components/QuoteCard";
+import { liveClassPhotos, videos, builderQuotes } from "../_data/cohort";
 
 const mentors = [
   {
@@ -81,13 +85,26 @@ export default function MentorsPage() {
     <main className="flex flex-col">
       {/* Hero */}
       <section className="bg-[#3D1F0D] text-white py-20 px-4 text-center">
-        <p className="text-[#F97316] font-bold tracking-widest uppercase text-sm mb-3">The Team</p>
+        <p className="text-[#F97316] font-bold tracking-widest uppercase text-sm mb-3">The Team · Cohort 1 Complete</p>
         <h1 className="font-black text-4xl md:text-6xl">
           Meet Your <span className="text-[#F97316]">Mentors</span>
         </h1>
         <p className="mt-4 text-orange-200 max-w-xl mx-auto text-lg">
-          9 skilled, passionate instructors. Each one dedicated to seeing you emerge.
+          9 skilled instructors who taught Cohort 1 live — classes, training, projects, and the Leadership Masterclass. They will teach the next cohort too.
         </p>
+      </section>
+
+      <section className="bg-white py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[#F97316] font-bold uppercase tracking-widest text-sm text-center mb-2">In session</p>
+          <h2 className="font-black text-2xl md:text-3xl text-[#3D1F0D] text-center mb-8">
+            Mentors with their Builders
+          </h2>
+          <div className="mb-6">
+            <VideoSlot {...videos[0]} />
+          </div>
+          <PhotoGrid items={liveClassPhotos} />
+        </div>
       </section>
 
       {/* Mentors grid */}
@@ -99,14 +116,44 @@ export default function MentorsPage() {
         </div>
       </section>
 
+      <section className="bg-white py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[#F97316] font-bold uppercase tracking-widest text-sm text-center mb-2">From the Builders</p>
+          <h2 className="font-black text-2xl md:text-3xl text-[#3D1F0D] text-center mb-8">
+            What Cohort 1 said about class
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {builderQuotes.slice(0, 3).map((q) => (
+              <QuoteCard
+                key={q.name}
+                quote={q.quote}
+                name={q.name}
+                meta={`${q.age} · ${q.track}`}
+                photo={q.photo}
+              />
+            ))}
+          </div>
+          <div className="mt-8">
+            <PhotoSlot
+              src="/media/cohort-1/mentors-group.svg"
+              alt="Cohort 1 mentors"
+              label="Mentors group photo"
+              caption="The Cohort 1 mentor team"
+              aspect="aspect-[21/9]"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-[#F97316] py-14 px-4 text-center">
-        <h2 className="text-2xl md:text-3xl font-black text-white">Ready to learn from the best?</h2>
+        <h2 className="text-2xl md:text-3xl font-black text-white">Ready to learn from the same mentors?</h2>
+        <p className="mt-2 text-white/80">Cohort 1 is done. The next cohort of Builders starts soon.</p>
         <Link
           href="/register"
           className="mt-6 inline-block bg-[#3D1F0D] hover:bg-[#2a1508] text-white font-black px-10 py-4 rounded-full text-lg transition-colors"
         >
-          Register Now
+          Join the Next Cohort
         </Link>
       </section>
 

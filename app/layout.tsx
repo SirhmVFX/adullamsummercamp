@@ -13,7 +13,7 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "Adullam Summer Camp",
   description:
-    "From Hiding to Emerging — Where Nigerian Kids Learn Skills That Matter. Ages 5–20.",
+    "Cohort 1 complete. From Hiding to Emerging — where Nigerian kids become Builders. Live classes, projects, leadership, certificates, and awards. Ages 5–20.",
 };
 
 export default function RootLayout({

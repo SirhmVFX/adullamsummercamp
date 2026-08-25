@@ -1,0 +1,56 @@
+Overwrite these dummy files with the real Cohort 1 photos and videos.
+
+PHOTOS (currently .svg scene cards)
+  live-class.svg
+  training.svg
+  hands-on.svg
+  interaction.svg
+  leadership.svg
+  award-day.svg
+  class-graphic-design.svg
+  class-video-editing.svg
+  class-web-dev.svg
+  class-product-design.svg
+  class-content.svg
+  class-crochet.svg
+  interaction-qa.svg
+  interaction-share.svg
+  interaction-breakout.svg
+  interaction-mentor.svg
+  project-website.svg
+  project-poster.svg
+  project-video.svg
+  project-ui.svg
+  project-crochet.svg
+  project-story.svg
+  certificate-1.svg
+  certificate-2.svg
+  special-award.svg
+  award-group.svg
+  leadership-1.svg
+  leadership-2.svg
+  about-community.svg
+  contact-community.svg
+  mentors-group.svg
+
+PORTRAITS (currently .png avatars)
+  builder-tolu.png
+  builder-amaka.png
+  builder-ibrahim.png
+  builder-zainab.png
+  builder-david.png
+  builder-fiyin.png
+  parent-adeyemi.png
+  parent-okonkwo.png
+  parent-bello.png
+  parent-danladi.png
+
+VIDEOS
+  video-live-class.mp4
+  video-interaction.mp4
+  video-projects.mp4
+  video-awards.mp4
+  video-builders.mp4
+  video-parents.mp4
+
+Quotes live in app/_data/cohort.ts — replace names and copy there.

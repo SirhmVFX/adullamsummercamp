@@ -1,6 +1,10 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import PhotoSlot from "../_components/PhotoSlot";
+import VideoSlot from "../_components/VideoSlot";
+import QuoteCard from "../_components/QuoteCard";
+import { awardPhotos, videos, builderQuotes, parentQuotes } from "../_data/cohort";
 
 const courses = [
   "Animation",
@@ -34,7 +38,6 @@ export default function RegisterPage() {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // Redirect to the Google Form
     window.open(
       "https://forms.gle/VFGW2s2V162jTkTc7",
       "_blank"
@@ -44,21 +47,56 @@ export default function RegisterPage() {
 
   return (
     <main className="flex flex-col">
-      {/* Hero */}
       <section className="bg-[#3D1F0D] text-white py-20 px-4 text-center">
-        <p className="text-[#F97316] font-bold tracking-widest uppercase text-sm mb-3">Join the Camp</p>
+        <p className="text-[#F97316] font-bold tracking-widest uppercase text-sm mb-3">Cohort 1 is complete</p>
         <h1 className="font-black text-4xl md:text-6xl">
-          Register <span className="text-[#F97316]">Now</span>
+          Join the <span className="text-[#F97316]">Next Cohort</span>
         </h1>
         <p className="mt-4 text-orange-200 max-w-xl mx-auto text-lg">
-          Secure your spot. Pick your skill. Start your journey from hiding to emerging.
+          Our first Builders finished live classes, projects, leadership, and Award Day. Register your child to become a Builder next.
         </p>
       </section>
 
-      {/* General requirements banner */}
+      <section className="bg-white py-12 px-4">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-center">
+          <VideoSlot {...videos[3]} />
+          <div>
+            <p className="text-[#F97316] font-bold uppercase tracking-widest text-sm mb-2">What the last cohort received</p>
+            <h2 className="font-black text-2xl text-[#3D1F0D]">The same journey awaits.</h2>
+            <ul className="mt-4 flex flex-col gap-2 text-[#3D1F0D]/70 text-sm">
+              <li>✓ Live classes, twice a week</li>
+              <li>✓ Training sessions and hands-on projects</li>
+              <li>✓ Live interaction sessions with mentors</li>
+              <li>✓ 2-day Leadership Masterclass</li>
+              <li>✓ Certificate and Award Day — plus special awards</li>
+            </ul>
+            <div className="grid grid-cols-2 gap-3 mt-6">
+              {awardPhotos.slice(0, 2).map((p) => (
+                <PhotoSlot key={p.src} {...p} />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-4 mt-8">
+          <QuoteCard
+            quote={builderQuotes[2].quote}
+            name={builderQuotes[2].name}
+            meta={`${builderQuotes[2].age} · ${builderQuotes[2].track}`}
+            photo={builderQuotes[2].photo}
+          />
+          <QuoteCard
+            quote={parentQuotes[2].quote}
+            name={parentQuotes[2].name}
+            meta={parentQuotes[2].relation}
+            photo={parentQuotes[2].photo}
+            badge="Parent"
+          />
+        </div>
+      </section>
+
       <section className="bg-[#F97316] px-4 py-6">
         <div className="max-w-3xl mx-auto">
-          <p className="font-black text-white text-sm uppercase tracking-wider mb-3">📌 General Requirements (All Learners)</p>
+          <p className="font-black text-white text-sm uppercase tracking-wider mb-3">📌 General Requirements (All Builders)</p>
           <div className="flex flex-wrap gap-3">
             {[
               "Ready to fully participate",
@@ -72,7 +110,6 @@ export default function RegisterPage() {
         </div>
       </section>
 
-      {/* Form */}
       <section className="bg-[#FFF8F0] py-16 px-4">
         <div className="max-w-2xl mx-auto">
           {submitted ? (
@@ -80,7 +117,7 @@ export default function RegisterPage() {
               <div className="text-6xl mb-4">🎉</div>
               <h2 className="font-black text-2xl text-[#3D1F0D]">You&apos;re on your way!</h2>
               <p className="mt-3 text-[#3D1F0D]/70">
-                The registration form has opened in a new tab. Complete it to secure your spot.
+                The registration form has opened in a new tab. Complete it to secure your Builder&apos;s spot in the next cohort.
               </p>
               <Link
                 href="/"
@@ -93,11 +130,10 @@ export default function RegisterPage() {
             <div className="bg-white rounded-3xl shadow-sm border border-orange-100 overflow-hidden">
               <div className="bg-[#3D1F0D] px-8 py-6">
                 <h2 className="font-black text-white text-2xl">Registration Form</h2>
-                <p className="text-orange-200 text-sm mt-1">Fill in your details to register for Adullam Summer Camp 2026</p>
+                <p className="text-orange-200 text-sm mt-1">Register a Builder for the next Adullam Summer Camp cohort</p>
               </div>
 
               <form onSubmit={handleSubmit} className="px-8 py-8 flex flex-col gap-6">
-                {/* Full name */}
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="name" className="text-sm font-black text-[#3D1F0D] uppercase tracking-wider">
                     Full Name *
@@ -111,7 +147,6 @@ export default function RegisterPage() {
                   />
                 </div>
 
-                {/* Age */}
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="age" className="text-sm font-black text-[#3D1F0D] uppercase tracking-wider">
                     Age *
@@ -127,7 +162,6 @@ export default function RegisterPage() {
                   />
                 </div>
 
-                {/* Phone */}
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="phone" className="text-sm font-black text-[#3D1F0D] uppercase tracking-wider">
                     Phone Number *
@@ -141,7 +175,6 @@ export default function RegisterPage() {
                   />
                 </div>
 
-                {/* Course selection */}
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="course" className="text-sm font-black text-[#3D1F0D] uppercase tracking-wider">
                     Choose Your Skill *
@@ -160,7 +193,6 @@ export default function RegisterPage() {
                   </select>
                 </div>
 
-                {/* Dynamic materials checklist */}
                 {selected && (
                   <div className="bg-[#FFF8F0] border border-orange-200 rounded-2xl p-5">
                     <p className="font-black text-[#3D1F0D] text-sm uppercase tracking-wider mb-3">
@@ -178,7 +210,6 @@ export default function RegisterPage() {
                   </div>
                 )}
 
-                {/* Device */}
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="device" className="text-sm font-black text-[#3D1F0D] uppercase tracking-wider">
                     Device Available *
@@ -195,7 +226,6 @@ export default function RegisterPage() {
                   </select>
                 </div>
 
-                {/* Submit */}
                 <button
                   type="submit"
                   className="bg-[#F97316] hover:bg-orange-500 text-white font-black py-4 rounded-full text-lg transition-colors mt-2"
@@ -211,8 +241,6 @@ export default function RegisterPage() {
           )}
         </div>
       </section>
-
-
     </main>
   );
 }

@@ -11,22 +11,21 @@ interface MentorCardProps {
   requirements: string[];
 }
 
-export default function MentorCard({ name, course, emoji, image, bio, requirements }: MentorCardProps) {
+export default function MentorCard({ name, course, image, bio, requirements }: MentorCardProps) {
   const [expanded, setExpanded] = useState(false);
   const preview = bio.slice(0, 80) + "…";
 
   return (
     <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-orange-100 flex flex-col">
-      {/* Header */}
       <div className="bg-[#3D1F0D] px-6 py-8 flex flex-col items-center text-center">
         <div className="w-32 h-32 rounded-full bg-[#F97316]/20 flex items-center justify-center text-4xl mb-4 overflow-hidden">
           <Image src={image} alt={name} width={128} height={128} className="rounded-full object-cover w-full h-full" />
         </div>
         <h2 className="font-black text-white text-xl">{name}</h2>
         <span className="mt-1 text-[#F97316] text-sm font-bold">{course}</span>
+        <span className="mt-2 text-orange-200/70 text-xs uppercase tracking-wider">Cohort 1 mentor</span>
       </div>
 
-      {/* Body */}
       <div className="px-6 py-5 flex flex-col gap-4 flex-1">
         <p className="text-[#3D1F0D]/70 text-sm leading-relaxed">
           {expanded ? bio : preview}

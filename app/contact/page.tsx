@@ -1,12 +1,18 @@
 "use client";
 import { useState } from "react";
+import PhotoSlot from "../_components/PhotoSlot";
+import VideoSlot from "../_components/VideoSlot";
+import QuoteCard from "../_components/QuoteCard";
+import { videos, builderQuotes, parentQuotes } from "../_data/cohort";
 
 const faqs = [
+  { q: "What happened in Cohort 1?", a: "Cohort 1 is complete. Every Builder finished live classes, training sessions, a hands-on project, live interaction sessions, and the 2-day Leadership Masterclass. Certificates were awarded. Special awards recognised outstanding Builders." },
+  { q: "Who are Builders?", a: "At Adullam, students are called Builders. They do not just attend camp — they make things: websites, designs, videos, stories, crochet pieces, and more." },
   { q: "What age group is the camp for?", a: "Adullam Summer Camp is open to children and young adults between ages 5 and 20." },
   { q: "Is the camp free?", a: "Registration is just N4,990. Some courses may require you to get specific materials (e.g., yarn for Crochet, CapCut for Video Editing)." },
-  { q: "Is it online or physical?", a: "100% online. All you need is a phone or laptop and access to the internet." },
-  { q: "When does the camp run?", a: "July–August 2026, 2 days per week, for 2 months (16 sessions total)." },
-  { q: "Can I register for more than one course?", a: "No the camp is designed for deep mastery. Each learner picks one skill and commits fully to it." },
+  { q: "Is it online or physical?", a: "100% online. Cohort 1 ran live classes and live interaction sessions. All you need is a phone or laptop and access to the internet." },
+  { q: "When is the next cohort?", a: "Cohort 1 ran July–August 2026. Register now to join the next cohort of Builders. We will confirm dates after you sign up." },
+  { q: "Can I register for more than one course?", a: "No — the camp is designed for deep mastery. Each Builder picks one skill and commits fully to it." },
   { q: "How do I register?", a: "Head to the Register page and fill out the form. It will redirect you to the official Google Form to complete your registration." },
 ];
 
@@ -21,22 +27,46 @@ export default function ContactPage() {
 
   return (
     <main className="flex flex-col">
-      {/* Hero */}
       <section className="bg-[#3D1F0D] text-white py-20 px-4 text-center">
         <p className="text-[#F97316] font-bold tracking-widest uppercase text-sm mb-3">Get in Touch</p>
         <h1 className="font-black text-4xl md:text-6xl">
           Contact <span className="text-[#F97316]">Us</span>
         </h1>
         <p className="mt-4 text-orange-200 max-w-xl mx-auto text-lg">
-          Have a question? We&apos;re happy to help. Reach out via any of the channels below.
+          Questions about Cohort 1, the next cohort, or registering a Builder? Reach out.
         </p>
       </section>
 
-      {/* Contact cards + form */}
+      <section className="bg-white py-12 px-4">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-4">
+          <VideoSlot {...videos[4]} />
+          <PhotoSlot
+            src="/media/cohort-1/contact-community.svg"
+            alt="Builders and parents at Award Day"
+            label="Award Day community"
+            caption="Builders, parents, and mentors at Certificate & Award Day"
+            aspect="aspect-video"
+          />
+        </div>
+        <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-4 mt-6">
+          <QuoteCard
+            quote={builderQuotes[1].quote}
+            name={builderQuotes[1].name}
+            meta={`${builderQuotes[1].age} · ${builderQuotes[1].track}`}
+            photo={builderQuotes[1].photo}
+          />
+          <QuoteCard
+            quote={parentQuotes[1].quote}
+            name={parentQuotes[1].name}
+            meta={parentQuotes[1].relation}
+            photo={parentQuotes[1].photo}
+            badge="Parent"
+          />
+        </div>
+      </section>
+
       <section className="bg-[#FFF8F0] py-16 px-4">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
-
-          {/* Left — contact info */}
           <div className="flex flex-col gap-6">
             <div>
               <p className="text-[#F97316] font-bold uppercase tracking-widest text-sm mb-4">Reach Us</p>
@@ -72,7 +102,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Social handles */}
             <div className="bg-[#3D1F0D] rounded-2xl p-6 text-white">
               <p className="font-black text-sm uppercase tracking-wider text-orange-200 mb-3">Follow the Camp</p>
               <p className="text-2xl font-black text-[#F97316]">@adullamsummercamp</p>
@@ -80,7 +109,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right — message form */}
           <div className="bg-white rounded-3xl border border-orange-100 shadow-sm overflow-hidden">
             <div className="bg-[#3D1F0D] px-6 py-5">
               <h2 className="font-black text-white text-xl">Send a Message</h2>
@@ -124,6 +152,7 @@ export default function ContactPage() {
                   >
                     <option value="" disabled>Select a topic...</option>
                     <option>Registration Help</option>
+                    <option>Cohort 1 / Certificates</option>
                     <option>Course Information</option>
                     <option>Technical Issues</option>
                     <option>Partnership / Sponsorship</option>
@@ -152,7 +181,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <p className="text-[#F97316] font-bold uppercase tracking-widest text-sm text-center mb-2">Got Questions?</p>
@@ -177,8 +205,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-   
     </main>
   );
 }
